@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+      <FILENAME>AnimationA.cpp</FILENAME>
+      <LINE>22</LINE>
+      <COLUMN>34</COLUMN>
+    </SFA>
+    <DEFECTCODE>6385</DEFECTCODE>
+    <DESCRIPTION>Odczyt nieprawidłowych danych z elementu „animationTexture”: rozmiar obszaru do odczytu to „(unsigned int)*40+4”, ale odczytana liczba bajtów może wynieść: „80”.</DESCRIPTION>
+    <FUNCTION>AnimationA::{ctor}</FUNCTION>
+    <DECORATED>??0AnimationA@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@00HM@Z</DECORATED>
+    <FUNCLINE>6</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>8</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>9</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>10</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>11</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>12</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>13</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>15</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>15</LINE>
+        <COLUMN>19</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>rozgałęzienie</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Wejdź do tej pętli (przyjmowane jest: „i&lt;n”)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>17</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>18</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>19</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>20</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>21</LINE>
+        <COLUMN>32</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>21</LINE>
+        <COLUMN>38</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>21</LINE>
+        <COLUMN>50</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>21</LINE>
+        <COLUMN>56</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>21</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>22</LINE>
+        <COLUMN>34</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>24</LINE>
+        <COLUMN>31</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>25</LINE>
+        <COLUMN>32</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>26</LINE>
+        <COLUMN>29</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>21</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>19</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>17</LINE>
+        <COLUMN>26</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>27</LINE>
+        <COLUMN>1</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>15</LINE>
+        <COLUMN>25</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>deklaracja</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Element „i” może mieć wartość równą 1</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>15</LINE>
+        <COLUMN>19</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>rozgałęzienie</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Kontynuuj tę pętlę (przyjmowane jest: „i&lt;n”)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>17</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>18</LINE>
+        <COLUMN>9</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>deklaracja</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Element „i” jest argumentem We/Wy dla elementu „std::basic_ostream&lt;char,std::char_traits&lt;char&gt; &gt;::&lt;&lt;” (deklaracja pod adresem c:\program files (x86)\microsoft visual studio\2019\community\vc\tools\msvc\14.26.28801\include\ostream:270)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>19</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>20</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>21</LINE>
+        <COLUMN>32</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>21</LINE>
+        <COLUMN>38</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>21</LINE>
+        <COLUMN>50</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>21</LINE>
+        <COLUMN>56</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>21</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>22</LINE>
+        <COLUMN>34</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>deklaracja</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Element „i” jest wyjściem dla elementu „sf::Texture::loadFromFile” (deklaracja pod adresem c:\users\chomik\desktop\projekt\sfml-2.5.1\include\sfml\graphics\texture.hpp:128)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>22</LINE>
+        <COLUMN>34</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>użycie</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Nieprawidłowy odczyt z elementu „animationTexture” (poza czytelnym zakresem)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+      <FILENAME>AnimationA.cpp</FILENAME>
+      <LINE>24</LINE>
+      <COLUMN>31</COLUMN>
+    </SFA>
+    <DEFECTCODE>6385</DEFECTCODE>
+    <DESCRIPTION>Odczyt nieprawidłowych danych z elementu „animationSprite”: rozmiar obszaru do odczytu to „(unsigned int)*272+4”, ale odczytana liczba bajtów może wynieść: „544”.</DESCRIPTION>
+    <FUNCTION>AnimationA::{ctor}</FUNCTION>
+    <DECORATED>??0AnimationA@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@00HM@Z</DECORATED>
+    <FUNCLINE>6</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>8</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>9</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>10</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>11</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>12</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>13</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>15</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>15</LINE>
+        <COLUMN>19</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>rozgałęzienie</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Wejdź do tej pętli (przyjmowane jest: „i&lt;n”)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>17</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>18</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>19</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>20</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>21</LINE>
+        <COLUMN>32</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>21</LINE>
+        <COLUMN>38</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>21</LINE>
+        <COLUMN>50</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>21</LINE>
+        <COLUMN>56</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>21</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>22</LINE>
+        <COLUMN>34</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>24</LINE>
+        <COLUMN>31</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>25</LINE>
+        <COLUMN>32</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>26</LINE>
+        <COLUMN>29</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>21</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>19</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>17</LINE>
+        <COLUMN>26</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>27</LINE>
+        <COLUMN>1</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>15</LINE>
+        <COLUMN>25</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>deklaracja</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Element „i” może mieć wartość równą 1</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>15</LINE>
+        <COLUMN>19</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>rozgałęzienie</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Kontynuuj tę pętlę (przyjmowane jest: „i&lt;n”)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>17</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>18</LINE>
+        <COLUMN>9</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>deklaracja</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Element „i” jest argumentem We/Wy dla elementu „std::basic_ostream&lt;char,std::char_traits&lt;char&gt; &gt;::&lt;&lt;” (deklaracja pod adresem c:\program files (x86)\microsoft visual studio\2019\community\vc\tools\msvc\14.26.28801\include\ostream:270)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>19</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>20</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>21</LINE>
+        <COLUMN>32</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>21</LINE>
+        <COLUMN>38</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>21</LINE>
+        <COLUMN>50</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>21</LINE>
+        <COLUMN>56</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>21</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>22</LINE>
+        <COLUMN>34</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>deklaracja</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Element „i” jest wyjściem dla elementu „sf::Texture::loadFromFile” (deklaracja pod adresem c:\users\chomik\desktop\projekt\sfml-2.5.1\include\sfml\graphics\texture.hpp:128)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>24</LINE>
+        <COLUMN>31</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>deklaracja</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Element „i” jest wyjściem dla elementu „sf::Sprite::setTexture” (deklaracja pod adresem c:\users\chomik\desktop\projekt\sfml-2.5.1\include\sfml\graphics\sprite.hpp:99)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\</FILEPATH>
+        <FILENAME>AnimationA.cpp</FILENAME>
+        <LINE>24</LINE>
+        <COLUMN>31</COLUMN>
+        <KEYEVENT>
+          <ID>7</ID>
+          <KIND>użycie</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Nieprawidłowy odczyt z elementu „animationSprite” (poza czytelnym zakresem)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+</DEFECTS>

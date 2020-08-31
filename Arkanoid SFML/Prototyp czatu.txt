@@ -1,0 +1,59 @@
+	IpAddress ip = IpAddress::getLocalAddress();
+	TcpSocket socket;
+	TcpListener listener;
+	unsigned int port = 2000;
+	char connectionType, mode = 'y', buffer[2000];
+	size_t received;
+	string text = "Connected to the ";
+
+	cout << "Enter (s) to connect to server, or (c) to connect client to the server\n-> ";
+	cin >> connectionType;
+
+	if (connectionType == 's')
+	{
+		if (listener.listen(port) != Socket::Done)
+		{
+			cerr << "Nie moge rozpoczac nasluchiwania na porcie " << port << endl;
+			exit(1);
+		}
+		listener.accept(socket);
+		text += "Server";
+		mode = 's';
+	}
+	else if (connectionType == 'c')
+	{
+		if (socket.connect(ip, port) != Socket::Done)
+		{
+			cerr << "Nie moge polaczyc sie z " << ip.toString() << endl;
+			exit(1);
+		}
+		text += "Client";
+		mode = 'r';
+	}
+
+	socket.send(text.c_str(), text.length() + 1);
+	socket.receive(buffer, sizeof(buffer), received);
+
+	cout << buffer << endl;
+
+	bool done = false;
+
+	while (!done)
+	{
+		if (mode == 's')
+		{
+			getline(cin, text);
+			socket.send(text.c_str(), text.length() + 1);
+			mode = 'r';
+		}
+		else if (mode == 'r')
+		{
+			socket.receive(buffer, sizeof(buffer), received);
+			if (received > 0)
+			{
+				cout << "Received: " << buffer << endl;
+				mode = 's';
+			}
+		}
+	}
+	system("pause");
