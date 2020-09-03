@@ -215,7 +215,7 @@ int Menu::EnterButton() // Przycisk Enter
 				pageNumber = 5;
 				changeArrowPositionPages();
 				creditsTxt.setPosition(20, 200);
-				playTxt.setString("Remember to enter your server ip in IpAddress.txt");
+				playTxt.setString("Connecting as a client");
 				playTxt.setFillColor(Color::White);
 				creditsTxt.setFillColor(Color::Red);
 				creditsTxt.setString("Connect");
@@ -235,7 +235,7 @@ int Menu::EnterButton() // Przycisk Enter
 			{
 				pageNumber = 5;
 				changeArrowPositionPages();
-				playTxt.setString("Remember to enter your server ip in IpAddress.txt");
+				playTxt.setString("Connecting as a host");
 				creditsTxt.setString("Connect");
 				creditsTxt.setPosition(20, 400);
 				quitTxt.setPosition(20, 450);
