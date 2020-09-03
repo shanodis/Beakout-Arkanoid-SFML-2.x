@@ -1,0 +1,25 @@
+﻿  AnimationA.cpp
+  AnimationB.cpp
+C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\AnimationB.cpp(14,46): warning C4244: "=": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\AnimationB.cpp(15,47): warning C4244: "=": konwersja z "float" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+  Ball.cpp
+  Blocks.cpp
+  GameMenu.cpp
+  Menu.cpp
+  Player.cpp
+  Scene.cpp
+C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\Scene.cpp(61,44): warning C4244: "=": konwersja z "float" do "int", możliwa utrata danych
+  Server.cpp
+  main.cpp
+C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\main.cpp(99,12): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+  Generowanie kodu...
+C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\Menu.cpp(419): warning C4715: "Menu::Run”: niewszystkie ścieżki kodu zwracają wartość
+  Arkanoid SFML.vcxproj -> C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Debug\Arkanoid SFML.exe
