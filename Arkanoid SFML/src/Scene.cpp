@@ -120,5 +120,5 @@ void Scene::drawGame(RenderWindow& window, int lives)
 	drawHearts(window, lives);
 	Ball::draw(window);
 	Player::draw(window);
-	drawBlocks(window);
+	drawBlocks(window, false);
 }

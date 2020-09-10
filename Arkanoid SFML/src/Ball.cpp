@@ -3,7 +3,7 @@
 
 Ball::Ball()
 {
-	ballX = 350; ballY = 350; ballSpeed = 1.3f;
+	ballX = 350; ballY = 520; ballSpeed = 1.3f;
 	balldx = (float)cos(250 * 3.141592 / 180) * ballSpeed; 
 	balldy = (float)sin(250 * 3.141592 / 180) * ballSpeed;
 	ballTexture.loadFromFile("data/ball.png");
@@ -61,6 +61,7 @@ bool Ball::secondPlayerCollision(Sprite playerSprite)
 {
 	if (Collision(playerSprite, ballSprite))
 	{
+		
 		int angle, dir = rand() % 2;
 		if (dir == 0)	angle = -(240 + rand() % 30);
 		else    angle = -(310 - rand() % 30);
@@ -112,6 +113,27 @@ bool Ball::blockCollision(Sprite blockSprite[])
 		{
 			blockSprite[i].setPosition(-1000, 0);
 			balldx = -balldx;
+			return true;
+		}
+	return false;
+}
+
+bool Ball::blockCollision(Sprite blockSprite[], int& blockNumber)
+{
+	for (int i = 0; i < N; i++)
+		if (Collision(ballSprite, blockSprite[i]))
+		{
+			blockSprite[i].setPosition(-1000, 0);
+			balldy = -balldy;
+			blockNumber = i;
+			return true;
+		}
+	for (int i = 0; i < N; i++)
+		if (Collision(ballSprite, blockSprite[i]))
+		{
+			blockSprite[i].setPosition(-1000, 0);
+			balldx = -balldx;
+			blockNumber = i;
 			return true;
 		}
 	return false;

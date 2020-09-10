@@ -10,6 +10,7 @@ protected:
 	unsigned int port;
 	char connectionType, mode;
 	bool update = false, block = false;
+	int blockNumber;
 
 private:
 	bool Connect();

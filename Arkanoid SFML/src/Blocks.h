@@ -1,16 +1,27 @@
 #include "Engine.h"
-#define N 35
 
 class Blocks
 {
 protected:
 	float blockX, blockY;
-	Texture blockTexture;
+	Texture blockTextureRed, blockTextureYellow;
+
+private:
+	Vector2f middleScreen;
+
+private:
+	void Level1();
+	void onlineLevel1();
+	void onlineLevel2();
+	void onlineLevel3();
 
 public:
-	Sprite blockSprite[N];
+	Sprite *blockSprite;
+	Sprite *verticalBlockSprite;
 
 public:
 	Blocks();
-	void drawBlocks(RenderWindow&);
+	~Blocks();
+	void drawBlocks(RenderWindow&, bool verticalDrawing);
+	void setLevel(unsigned int level, bool singlePlayer);
 };

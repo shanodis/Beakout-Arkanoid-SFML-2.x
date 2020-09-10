@@ -23,6 +23,7 @@ Server::Server(char gameplayType)
 	port = 7777;
 	mode = 'n';
 	connectionType = gameplayType;
+	blockNumber = 0;
 }
 
 bool Server::Connect()
@@ -62,8 +63,9 @@ void Server::updateBall(Player player2)
 		moveBall(true);
 		paddleCollision(playerSprite, false);
 		paddleCollision(player2.playerSprite, true);
+		blockCollision(blockSprite, blockNumber);
 		Packet packet;
-		packet << ballSprite.getPosition().x << ballSprite.getPosition().y;
+		packet << ballSprite.getPosition().x << ballSprite.getPosition().y << blockNumber;
 		socket.send(packet);
 	}
 	else if (mode == 'r') // tryb otrzymywania danych
@@ -71,14 +73,34 @@ void Server::updateBall(Player player2)
 		Packet packet;
 		socket.receive(packet);
 
-		if (packet >> b2Position.x >> b2Position.y)
+		if (packet >> b2Position.x >> b2Position.y >> blockNumber)
+		{
+			verticalBlockSprite[blockNumber].setPosition(-1000, 0);
 			moveBall(b2Position.x, 560 - b2Position.y);
+		}
 	}
 }
 
 void Server::updateBlocks()
 {
-	
+	if (mode == 's') // tryb wysy³ania danych
+	{
+		if (blockCollision(blockSprite, blockNumber))
+		{
+			Packet packet;
+			packet << blockNumber;
+			socket.send(packet);
+		}
+	}
+	else if (mode == 'r') // tryb otrzymywania danych
+	{
+		Packet packet;
+		socket.receive(packet);
+		if (packet >> blockNumber)
+		{
+			blockSprite[blockNumber].setPosition(-1000, 0);
+		}
+	}
 }
 
 void Server::updatePlayer(Player& player2)
@@ -130,6 +152,7 @@ void Server::Run(RenderWindow& window)
 
 		updateBall(player2);
 		updatePlayer(player2);
+		//updateBlocks();
 
 		// Rysowanie sceny
 		window.clear(Color(219, 176, 239)); // Kolor wrzosowy
@@ -137,6 +160,10 @@ void Server::Run(RenderWindow& window)
 		Player::draw(window);
 		player2.draw(window);
 		Ball::draw(window);
+		if (mode == 'r')
+			drawBlocks(window, true);
+		else if (mode == 's')
+			drawBlocks(window, false);
 		drawInterface(window);
 
 		window.display();

@@ -21,5 +21,6 @@ public:
 	void setStartPosition(bool goToPaddle);
 	bool paddleCollision(Sprite playerSprite, bool isSecondPlayer);
 	bool blockCollision(Sprite blockSprite[]);
+	bool blockCollision(Sprite blockSprite[], int& blockNumber);
 	void draw(RenderWindow &window);
 };
