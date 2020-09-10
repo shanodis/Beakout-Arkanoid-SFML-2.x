@@ -4,7 +4,7 @@ class Blocks
 {
 protected:
 	float blockX, blockY;
-	Texture blockTextureRed, blockTextureYellow;
+	Texture blockTextureRed, blockTextureYellow, blockTextureGreen;
 
 private:
 	Vector2f middleScreen;
@@ -16,8 +16,8 @@ private:
 	void onlineLevel3();
 
 public:
-	Sprite *blockSprite;
-	Sprite *verticalBlockSprite;
+	Sprite **blockSprite;
+	Sprite **verticalBlockSprite;
 
 public:
 	Blocks();

@@ -97,20 +97,14 @@ int main()
 
 	window.setFramerateLimit(60);
 	srand(time(0));
-
-	Blocks blocks;
-	blocks.setLevel(1, false);
 	while (true)
 	{
-		window.clear(Color::Green);
-		blocks.drawBlocks(window, false);
-		window.display();
 		
-		/*gameplayType = GameMenu(window);
+		gameplayType = GameMenu(window);
 
 		if (gameplayType != 'q')
 			if (!playOnline(window, gameplayType)) break;
-		break;*/
+		break;
 		//if (!Level_1(window)) break;
 		//if (!playOnline(window)) break;
 	}

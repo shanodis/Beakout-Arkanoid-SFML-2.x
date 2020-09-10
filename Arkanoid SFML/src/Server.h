@@ -10,13 +10,12 @@ protected:
 	unsigned int port;
 	char connectionType, mode;
 	bool update = false, block = false;
-	int blockNumber;
+	Vector2u blockNumber;
 
 private:
 	bool Connect();
 	void updateBall(Player player2);
 	void updatePlayer(Player& player2);
-	void updateBlocks();
 
 public:
 	Server(char gameplayType);

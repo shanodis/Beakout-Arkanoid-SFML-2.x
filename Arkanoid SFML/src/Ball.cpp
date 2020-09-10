@@ -91,7 +91,6 @@ bool Ball::paddleCollision(Sprite playerSprite, bool isSecondPlayer)
 
 			balldx = (float)cos(angle * 3.141592 / 180) * ballSpeed;
 			balldy = (float)sin(angle * 3.141592 / 180) * ballSpeed;
-			//balldy = -balldy;
 
 			return true;
 		}
@@ -99,43 +98,45 @@ bool Ball::paddleCollision(Sprite playerSprite, bool isSecondPlayer)
 	return false;
 }
 
-bool Ball::blockCollision(Sprite blockSprite[])
+bool Ball::blockCollision(Sprite **blockSprite)
 {
 	for (int i = 0; i < N; i++)
-		if (Collision(ballSprite, blockSprite[i]))
+	{
+		if (Collision(ballSprite, blockSprite[i][0]))
 		{
-			blockSprite[i].setPosition(-1000, 0);
+			blockSprite[i][0].setPosition(-1000, 0);
 			balldy = -balldy;
 			return true;
 		}
-	for (int i = 0; i < N; i++)
-		if (Collision(ballSprite, blockSprite[i]))
+		else if (Collision(ballSprite, blockSprite[i][1]))
 		{
-			blockSprite[i].setPosition(-1000, 0);
-			balldx = -balldx;
+			blockSprite[i][1].setPosition(-1000, 0);
+			balldy = -balldy;
 			return true;
 		}
+	}
 	return false;
 }
 
-bool Ball::blockCollision(Sprite blockSprite[], int& blockNumber)
+bool Ball::blockCollision(Sprite **blockSprite, Vector2u& blockNumber)
 {
 	for (int i = 0; i < N; i++)
-		if (Collision(ballSprite, blockSprite[i]))
+	{
+		if (Collision(ballSprite, blockSprite[i][0]))
 		{
-			blockSprite[i].setPosition(-1000, 0);
+			blockSprite[i][0].setPosition(-1000, 0);
 			balldy = -balldy;
-			blockNumber = i;
+			blockNumber.x = i;
 			return true;
 		}
-	for (int i = 0; i < N; i++)
-		if (Collision(ballSprite, blockSprite[i]))
+		else if (Collision(ballSprite, blockSprite[i][1]))
 		{
-			blockSprite[i].setPosition(-1000, 0);
-			balldx = -balldx;
-			blockNumber = i;
+			blockSprite[i][1].setPosition(-1000, 0);
+			balldy = -balldy;
+			blockNumber.y = i;
 			return true;
 		}
+	}
 	return false;
 }
 

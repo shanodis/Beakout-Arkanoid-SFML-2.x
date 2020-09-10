@@ -20,7 +20,7 @@ public:
 	bool moveBall(float x, float y);
 	void setStartPosition(bool goToPaddle);
 	bool paddleCollision(Sprite playerSprite, bool isSecondPlayer);
-	bool blockCollision(Sprite blockSprite[]);
-	bool blockCollision(Sprite blockSprite[], int& blockNumber);
+	bool blockCollision(Sprite **blockSprite);
+	bool blockCollision(Sprite **blockSprite, Vector2u& blockNumber);
 	void draw(RenderWindow &window);
 };
