@@ -5,7 +5,7 @@ class Scene : public Player, public Ball, public Blocks
 private:
 	RectangleShape *rectangle;
 	Texture heartTexture, landscapeTexture;
-	Sprite heartSprite[3], landscapeSprite;
+	Sprite *heartSprite, landscapeSprite;
 	Font font;
 	Text liveText, scoreText, timeText;
 	Clock clock;
@@ -15,15 +15,18 @@ public:
 	int score;
 
 private:
-	void drawHearts(RenderWindow&, int);
+	void playerCollisions(AnimationB& heart);
+	void drawHearts(RenderWindow&);
+	void setInterface();
 
 public:
 	Scene();
 	Scene(unsigned int level);
 	~Scene();
+	void Run(RenderWindow& window);
 	void drawInterface(RenderWindow& window);
 	void gameTime();
-	void showTime(int, int);
+	void showTime();
 	void showScore();
-	void drawGame(RenderWindow&,int);
+	void drawGame(RenderWindow&);
 };

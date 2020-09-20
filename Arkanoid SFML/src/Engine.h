@@ -8,11 +8,11 @@ using namespace sf;
 #define N 35
 
 #include "Menu.h"
-#include "Player.h"
 #include "Blocks.h"
 #include "Ball.h"
 #include "AnimationA.h"
 #include "AnimationB.h"
+#include "Player.h"
 #include "Scene.h"
 #include "Server.h"
 

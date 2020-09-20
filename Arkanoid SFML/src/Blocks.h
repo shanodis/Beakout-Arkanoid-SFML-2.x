@@ -7,6 +7,7 @@ protected:
 	Texture blockTextureRed, blockTextureYellow, blockTextureGreen;
 
 private:
+	unsigned int totalBlocks;
 	Vector2f middleScreen;
 
 private:

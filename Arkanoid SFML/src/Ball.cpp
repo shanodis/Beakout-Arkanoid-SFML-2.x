@@ -115,6 +115,22 @@ bool Ball::blockCollision(Sprite **blockSprite)
 			return true;
 		}
 	}
+
+	for (int i = 0; i < N; i++)
+	{
+		if (Collision(ballSprite, blockSprite[i][0]))
+		{
+			blockSprite[i][0].setPosition(-1000, 0);
+			balldx = -balldx;
+			return true;
+		}
+		else if (Collision(ballSprite, blockSprite[i][1]))
+		{
+			blockSprite[i][1].setPosition(-1000, 0);
+			balldx = -balldx;
+			return true;
+		}
+	}
 	return false;
 }
 
@@ -133,6 +149,24 @@ bool Ball::blockCollision(Sprite **blockSprite, Vector2u& blockNumber)
 		{
 			blockSprite[i][1].setPosition(-1000, 0);
 			balldy = -balldy;
+			blockNumber.y = i;
+			return true;
+		}
+	}
+
+	for (int i = 0; i < N; i++)
+	{
+		if (Collision(ballSprite, blockSprite[i][0]))
+		{
+			blockSprite[i][0].setPosition(-1000, 0);
+			balldx = -balldx;
+			blockNumber.x = i;
+			return true;
+		}
+		else if (Collision(ballSprite, blockSprite[i][1]))
+		{
+			blockSprite[i][1].setPosition(-1000, 0);
+			balldx = -balldx;
 			blockNumber.y = i;
 			return true;
 		}

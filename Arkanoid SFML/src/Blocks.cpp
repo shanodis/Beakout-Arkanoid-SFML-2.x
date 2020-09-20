@@ -2,19 +2,25 @@
 
 Blocks::Blocks() 
 { 
-	blockX = blockY = 0; 
+	totalBlocks = blockX = blockY = 0; 
 	blockSprite = verticalBlockSprite = NULL;
 }
 
 Blocks::~Blocks()
 {
-	for (int i = 0; i < N; i++)
+	if (blockSprite != NULL)
 	{
-		delete[] blockSprite[i];
-		delete[] verticalBlockSprite[i];
+		for (int i = 0; i < N; i++)
+			delete[] blockSprite[i];
+		delete[] blockSprite;
 	}
-	delete[] blockSprite;
-	delete[] verticalBlockSprite;
+
+	if (verticalBlockSprite != NULL)
+	{
+		for (int i = 0; i < N; i++)
+			delete[] verticalBlockSprite[i];
+		delete[] verticalBlockSprite;
+	}
 }
 
 void Blocks::Level1()
@@ -28,14 +34,15 @@ void Blocks::Level1()
 	for (int j = 0; j < 5; j++) // Oœ Y dla bloków
 		for (int i = 0; i < 7; i++) // Oœ X dla blocków
 		{
-			blockSprite[n][n].setTexture(blockTextureRed);
-			blockSprite[n][n].setPosition(50 + i * blockX, 120 + j * blockY);
+			blockSprite[n][0].setTexture(blockTextureRed);
+			blockSprite[n][0].setPosition(50 + i * blockX, 120 + j * blockY);
 			n++;
 		}
 }
 
 void Blocks::onlineLevel1()
 {
+	totalBlocks = 24;
 	blockSprite = new Sprite*[N];
 	for (int i = 0; i < N; i++)
 		blockSprite[i] = new Sprite[2];
