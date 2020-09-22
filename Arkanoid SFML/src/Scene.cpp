@@ -89,7 +89,7 @@ Scene::Scene(unsigned int level) // Dla trybu pojedynczego gracza
 	switch (level)
 	{
 	case 1:
-		landscapeTexture.loadFromFile("data/fortress.png");
+		landscapeTexture.loadFromFile("data/shore.png");
 		landscapeSprite.setTexture(landscapeTexture);
 		landscapeSprite.setPosition(-450, 0);
 		break;
@@ -107,7 +107,7 @@ Scene::~Scene()
 
 void Scene::gameTime()
 {
-	seconds = clock.getElapsedTime().asSeconds();
+	seconds = (int)clock.getElapsedTime().asSeconds();
 	if (seconds == 60)
 	{
 		clock.restart();

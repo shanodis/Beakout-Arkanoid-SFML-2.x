@@ -3,10 +3,10 @@
 class Menu
 {
 private:
-	Texture landscapeTexture, headerTexture, arrowTexture;
-	Sprite landscapeSprite, headerSprite, arrowSprite;
+	Texture **levelTexture, landscapeTexture, headerTexture, arrowTexture;
+	Sprite **levelSprite, landscapeSprite, headerSprite, arrowSprite;
 	Font font;
-	Text playTxt, creditsTxt, quitTxt, credits, backTxt;
+	Text *levelTxt, playTxt, creditsTxt, quitTxt, credits, backTxt;
 	SoundBuffer switchSoundBuffer, chooseSoundBuffer;
 	Music themeMusic;
 	Sound switchSound, chooseSound;
@@ -14,6 +14,10 @@ private:
 	char connectionType;
 
 private:
+	void page6();
+	void createPage6();
+	void deletePage6();
+	void moveInPage6();
 	void changeArrowPositionCredits();
 	void changeArrowPositionPages();
 	void moveLandscape();

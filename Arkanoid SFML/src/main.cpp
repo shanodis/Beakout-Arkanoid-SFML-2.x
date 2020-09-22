@@ -47,14 +47,22 @@ int main()
 	while (true)
 	{
 		// Offline
-		if (!Level_1(window)) break;
 
 		// Online
-		/*gameplayType = GameMenu(window);
+		gameplayType = GameMenu(window);
 
-		if (gameplayType != 'q')
+		switch(gameplayType)
+		{
+		case '1':
+			if (!Level_1(window)) break;
+
+		case 'q':
+			break;
+
+		default:
 			if (!playOnline(window, gameplayType)) break;
-		break;*/
+		}
+		break;
 	}
 	
 	return 0;
