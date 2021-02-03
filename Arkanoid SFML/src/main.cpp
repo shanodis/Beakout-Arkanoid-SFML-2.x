@@ -37,6 +37,14 @@ bool Level_1(RenderWindow &window)
 	return false;
 }
 
+bool Level_2(RenderWindow& window)
+{
+	Scene scene(2);
+	scene.Run(window);
+
+	return false;
+}
+
 int main()
 {
 	RenderWindow window(VideoMode(800, 600, 32), "Arkanoid");
@@ -55,6 +63,8 @@ int main()
 		{
 		case '1':
 			if (!Level_1(window)) break;
+		case '2':
+			if (!Level_2(window)) break;
 
 		case 'q':
 			break;

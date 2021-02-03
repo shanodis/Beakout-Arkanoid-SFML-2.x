@@ -12,9 +12,9 @@ private:
 
 private:
 	void Level1();
-	void onlineLevel1();
-	void onlineLevel2();
-	void onlineLevel3();
+	void Level2();
+	void Level3();
+	void onlineLevel();
 
 public:
 	Sprite **blockSprite;

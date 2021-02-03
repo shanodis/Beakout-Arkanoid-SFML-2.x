@@ -49,7 +49,7 @@ Scene::Scene()
 	heartSprite = new Sprite[3];
 	rectangle->setPosition(550, 0);
 	rectangle->setFillColor(Color(122, 125, 128));		
-	score = 0;
+	level = score = 0;
 
 	seconds = minutes = 0;
 	lives = 3;
@@ -84,6 +84,7 @@ Scene::Scene()
 
 Scene::Scene(unsigned int level) // Dla trybu pojedynczego gracza
 {
+	this->level = level;
 	setInterface();
 
 	switch (level)
@@ -187,7 +188,7 @@ void Scene::Run(RenderWindow& window)
 	Clock animationClock;
 	float deltaTime = 0.0f;
 
-	setLevel(1, true);
+	setLevel(level, true);
 	while (window.isOpen())
 	{
 		// Obs³uga zdarzeñ

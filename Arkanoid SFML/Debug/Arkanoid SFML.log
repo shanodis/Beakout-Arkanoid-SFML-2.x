@@ -1,25 +1,23 @@
-﻿  AnimationA.cpp
-  AnimationB.cpp
-C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\AnimationB.cpp(14,46): warning C4244: "=": konwersja z "float" do "T", możliwa utrata danych
-          with
-          [
-              T=int
-          ]
-C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\AnimationB.cpp(15,47): warning C4244: "=": konwersja z "float" do "T", możliwa utrata danych
-          with
-          [
-              T=int
-          ]
-  Ball.cpp
-  Blocks.cpp
-  GameMenu.cpp
-  Menu.cpp
-  Player.cpp
-  Scene.cpp
-C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\Scene.cpp(61,44): warning C4244: "=": konwersja z "float" do "int", możliwa utrata danych
-  Server.cpp
-  main.cpp
-C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\main.cpp(99,12): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
-  Generowanie kodu...
-C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\Menu.cpp(419): warning C4715: "Menu::Run”: niewszystkie ścieżki kodu zwracają wartość
+﻿  Blocks.cpp
+C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\Blocks.cpp(5,23): warning C4244: "=": konwersja z "float" do "unsigned int", możliwa utrata danych
+C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\Blocks.cpp(74,10): warning C4244: "inicjowanie": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\Blocks.cpp(75,10): warning C4244: "inicjowanie": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\Blocks.cpp(76,37): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\Blocks.cpp(76,34): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\Blocks.cpp(77,37): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\Blocks.cpp(77,34): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\Blocks.cpp(78,49): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\Blocks.cpp(78,42): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\Blocks.cpp(79,49): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\Blocks.cpp(79,42): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\Blocks.cpp(88,10): warning C4244: "inicjowanie": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\Blocks.cpp(89,10): warning C4244: "inicjowanie": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\Blocks.cpp(90,37): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\Blocks.cpp(90,34): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\Blocks.cpp(91,37): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\Blocks.cpp(91,34): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\Blocks.cpp(92,49): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\Blocks.cpp(92,42): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\Blocks.cpp(93,49): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\Blocks.cpp(93,42): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
   Arkanoid SFML.vcxproj -> C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Debug\Arkanoid SFML.exe

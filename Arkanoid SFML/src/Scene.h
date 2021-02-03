@@ -10,6 +10,7 @@ private:
 	Text liveText, scoreText, timeText;
 	Clock clock;
 	int minutes, seconds, lives;
+	unsigned int level;
 
 public:
 	int score;

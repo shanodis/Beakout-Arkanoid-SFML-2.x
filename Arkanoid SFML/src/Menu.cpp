@@ -328,6 +328,11 @@ int Menu::EnterButton() // Przycisk Enter
 				creditsTxt.setString("Host game"); 
 				quitTxt.setString("Back");
 			}
+			else if (pageNumber == 6)
+			{
+				connectionType = '2';
+				return 1;
+			}
 			break;
 
 		case 3:
@@ -392,27 +397,27 @@ void Menu::moveInPage6()
 			switchSound.play();
 			state++;
 		}
-	}
 
-	switch (state)
-	{
-	case 1:
-		levelTxt[0].setFillColor(Color::Red);
-		levelTxt[1].setFillColor(Color::White);
-		levelTxt[2].setFillColor(Color::White);
-		break;
+		switch (state)
+		{
+		case 1:
+			levelTxt[0].setFillColor(Color::Red);
+			levelTxt[1].setFillColor(Color::White);
+			levelTxt[2].setFillColor(Color::White);
+			break;
 
-	case 2:
-		levelTxt[0].setFillColor(Color::White);
-		levelTxt[1].setFillColor(Color::Red);
-		levelTxt[2].setFillColor(Color::White);
-		break;
+		case 2:
+			levelTxt[0].setFillColor(Color::White);
+			levelTxt[1].setFillColor(Color::Red);
+			levelTxt[2].setFillColor(Color::White);
+			break;
 
-	case 3:
-		levelTxt[0].setFillColor(Color::White);
-		levelTxt[1].setFillColor(Color::White);
-		levelTxt[2].setFillColor(Color::Red);
-		break;
+		case 3:
+			levelTxt[0].setFillColor(Color::White);
+			levelTxt[1].setFillColor(Color::White);
+			levelTxt[2].setFillColor(Color::Red);
+			break;
+		}
 	}
 }
 
