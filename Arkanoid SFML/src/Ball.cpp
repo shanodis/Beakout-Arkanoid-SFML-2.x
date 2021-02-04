@@ -23,7 +23,7 @@ Ball::Ball(float x, float y)
 
 void Ball::setStartPosition(bool goToPaddle)
 {
-	ballSprite.setPosition(300, 300);
+	ballSprite.setPosition(300.0f, 500.0f);
 	if(goToPaddle)
 		balldy = -balldy;
 }

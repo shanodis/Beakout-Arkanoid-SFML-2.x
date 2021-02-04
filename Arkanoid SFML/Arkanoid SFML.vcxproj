@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="src\AnimationA.cpp" />
     <ClCompile Include="src\AnimationB.cpp" />
+    <ClCompile Include="src\App.cpp" />
     <ClCompile Include="src\Ball.cpp" />
     <ClCompile Include="src\Blocks.cpp" />
     <ClCompile Include="src\GameMenu.cpp" />
@@ -33,6 +34,7 @@
   <ItemGroup>
     <ClInclude Include="src\AnimationA.h" />
     <ClInclude Include="src\AnimationB.h" />
+    <ClInclude Include="src\App.h" />
     <ClInclude Include="src\Ball.h" />
     <ClInclude Include="src\Blocks.h" />
     <ClInclude Include="src\Engine.h" />

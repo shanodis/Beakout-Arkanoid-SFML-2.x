@@ -5,9 +5,9 @@
 
 void Scene::setInterface()
 {
-	rectangle = new RectangleShape(Vector2f(250, 600));
+	rectangle = new RectangleShape(Vector2f(250.0f, 600.0f));
 	heartSprite = new Sprite[3];
-	rectangle->setPosition(550, 0);
+	rectangle->setPosition(550.0f, 0.0f);
 	rectangle->setFillColor(Color(122, 125, 128));
 	score = 0;
 
@@ -19,25 +19,25 @@ void Scene::setInterface()
 	liveText.setFont(font);
 	liveText.setCharacterSize(24);
 	liveText.setFillColor(Color::White);
-	liveText.setPosition(560, 120);
+	liveText.setPosition(560.0f, 120.0f);
 	liveText.setString("Remaining lifes:");
 
 	timeText.setFont(font);
 	timeText.setCharacterSize(24);
 	timeText.setFillColor(Color::White);
-	timeText.setPosition(560, 20);
+	timeText.setPosition(560.0f, 20.0f);
 
 	scoreText.setFont(font);
 	scoreText.setCharacterSize(24);
 	scoreText.setFillColor(Color::White);
-	scoreText.setPosition(560, 72);
+	scoreText.setPosition(560.0f, 72.0f);
 
 	// Sprite'y
 	heartTexture.loadFromFile("data/heart.png");
 	for (int i = 0; i < 3; i++)
 	{
 		heartSprite[i].setTexture(heartTexture);
-		heartSprite[i].setPosition(560 + (float)i * 45, 150);
+		heartSprite[i].setPosition(560.0f + (float)i * 45.0f, 150.0f);
 		heartSprite[i].setScale(Vector2f(0.7f, 0.7f));
 	}
 }
@@ -45,9 +45,9 @@ void Scene::setInterface()
 Scene::Scene()
 {
 	// Zak³adka na interfejs
-	rectangle = new RectangleShape(Vector2f(250, 600));
+	rectangle = new RectangleShape(Vector2f(250.0f, 600.0f));
 	heartSprite = new Sprite[3];
-	rectangle->setPosition(550, 0);
+	rectangle->setPosition(550.0f, 0.0f);
 	rectangle->setFillColor(Color(122, 125, 128));		
 	level = score = 0;
 
@@ -59,25 +59,25 @@ Scene::Scene()
 	liveText.setFont(font);
 	liveText.setCharacterSize(24);
 	liveText.setFillColor(Color::White);
-	liveText.setPosition(560, 120);
+	liveText.setPosition(560.0f, 120.0f);
 	liveText.setString("Remaining lifes:");
 
 	timeText.setFont(font);
 	timeText.setCharacterSize(24);
 	timeText.setFillColor(Color::White);
-	timeText.setPosition(560, 20);
+	timeText.setPosition(560.0f, 20.0f);
 
 	scoreText.setFont(font);
 	scoreText.setCharacterSize(24);
 	scoreText.setFillColor(Color::White);
-	scoreText.setPosition(560, 72);
+	scoreText.setPosition(560.0f, 72.0f);
 
 	// Sprite'y
 	heartTexture.loadFromFile("data/heart.png");
 	for (int i = 0; i < 3; i++)
 	{
 		heartSprite[i].setTexture(heartTexture);
-		heartSprite[i].setPosition(560 + (float)i * 45, 150);
+		heartSprite[i].setPosition(560 + (float)i * 45.0f, 150.0f);
 		heartSprite[i].setScale(Vector2f(0.7f, 0.7f));
 	}
 }
@@ -92,7 +92,19 @@ Scene::Scene(unsigned int level) // Dla trybu pojedynczego gracza
 	case 1:
 		landscapeTexture.loadFromFile("data/shore.png");
 		landscapeSprite.setTexture(landscapeTexture);
-		landscapeSprite.setPosition(-450, 0);
+		landscapeSprite.setPosition(-450.0f, 0.0f);
+		break;
+
+	case 2:
+		landscapeTexture.loadFromFile("data/sunsetintheswamp.png");
+		landscapeSprite.setTexture(landscapeTexture);
+		landscapeSprite.setPosition(-450.0f, 0.0f);
+		break;
+
+	case 3:
+		landscapeTexture.loadFromFile("data/coldmountain.png");
+		landscapeSprite.setTexture(landscapeTexture);
+		landscapeSprite.setPosition(-450.0f, 0.0f);
 		break;
 
 	default:

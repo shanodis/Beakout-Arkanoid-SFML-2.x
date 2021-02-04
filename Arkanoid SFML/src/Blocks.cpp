@@ -23,23 +23,6 @@ Blocks::~Blocks()
 	}
 }
 
-void Blocks::Level1()
-{
-	blockSprite = new Sprite*[N];
-	for (int i = 0; i < N; i++)
-		blockSprite[i] = new Sprite[2];
-	blockTextureRed.loadFromFile("data/block green.png");
-	blockX = 70; blockY = 40;
-	int n = 0;
-	for (int j = 0; j < 5; j++) // Oœ Y dla bloków
-		for (int i = 0; i < 7; i++) // Oœ X dla blocków
-		{
-			blockSprite[n][0].setTexture(blockTextureRed);
-			blockSprite[n][0].setPosition(50 + i * blockX, 120 + j * blockY);
-			n++;
-		}
-}
-
 void Blocks::onlineLevel()
 {
 	totalBlocks = 24;
@@ -95,37 +78,92 @@ void Blocks::onlineLevel()
 		}
 	}
 }
-void Blocks::Level2()
+
+void Blocks::Level1()
 {
-	/*blockSprite = new Sprite * [N];
+	blockSprite = new Sprite * [N];
 	for (int i = 0; i < N; i++)
 		blockSprite[i] = new Sprite[2];
-	blockTextureRed.loadFromFile("data/block green.png");
+	blockTextureGreen.loadFromFile("data/block green.png");
 	blockX = 70; blockY = 40;
 	int n = 0;
 	for (int j = 0; j < 5; j++) // Oœ Y dla bloków
 		for (int i = 0; i < 7; i++) // Oœ X dla blocków
 		{
-			blockSprite[n][0].setTexture(blockTextureRed);
+			blockSprite[n][0].setTexture(blockTextureGreen);
 			blockSprite[n][0].setPosition(50 + i * blockX, 120 + j * blockY);
 			n++;
-		}*/
-	// ...
+		}
+}
+
+void Blocks::Level2() // Poziom 2, Schodki wywrócone
+{
+	blockSprite = new Sprite * [N];
+	for (int i = 0; i < N; i++)
+		blockSprite[i] = new Sprite[2];
+	blockTextureYellow.loadFromFile("data/block yellow.png");
+	blockTextureGreen.loadFromFile("data/block green.png");
+	blockX = 70; blockY = 40;
+
+	for (int i = 0; i < N; i++)
+	{
+		blockSprite[i][0].setTexture(blockTextureYellow);
+		blockSprite[i][0].setPosition(-1000, 0);
+		blockSprite[i][1].setTexture(blockTextureGreen);
+		blockSprite[i][1].setPosition(-1000, 0);
+	}
+
+	int i, j, n = 0;
+	for (i = 3; i > 0; i--) 
+	{
+		for (j = i; j > 0; j--)
+		{
+			int x = 230 + j * blockX;
+			int y = 140 + i * blockY;
+			blockSprite[n][0].setPosition(x, y);
+			blockSprite[n][1].setPosition(x, y);
+			n++;
+		}
+	}
+
+	for (i = 0; i < 3; i++)
+	{
+		for (j = i; j < 3; j++)
+		{
+			int x = 90 + j * blockX;
+			int y = 300 + i * blockY;
+			blockSprite[n][0].setPosition(x, y);
+			blockSprite[n][1].setPosition(x, y);
+			n++;
+		}
+	}
 }
 
 void Blocks::Level3()
 {
-	/*int i, j, n = 0;
+	blockSprite = new Sprite * [N];
+	for (int i = 0; i < N; i++)
+		blockSprite[i] = new Sprite[2];
+	blockTextureBlue.loadFromFile("data/block_blue.png");
+	blockX = 70; blockY = 40;
+
+	for (int i = 0; i < N; i++)
+	{
+		blockSprite[i][0].setTexture(blockTextureBlue);
+		blockSprite[i][0].setPosition(-1000, 0);
+	}
+
+	int i, j, n = 0;
 	for (i = 7; i > 0; i--) // Poziom 3 Online, Schodki
 	{
 		for (j = i; j > 0; j--)
 		{
-			int x = 50 + j * blockX;
-			int y = 120 + i * blockY;
-			blockSprite[n].setPosition(x, y);
+			int x = -50 + j * blockX;
+			int y = 20 + i * blockY;
+			blockSprite[n][0].setPosition(x, y);
 			n++;
 		}
-	}*/
+	}
 }
 
 void Blocks::setLevel(unsigned int level, bool singlePlayer)
@@ -139,6 +177,10 @@ void Blocks::setLevel(unsigned int level, bool singlePlayer)
 			break;
 		case 2:
 			Level2();
+			break;
+		
+		case 3:
+			Level3();
 			break;
 
 		default: break;

@@ -352,6 +352,11 @@ int Menu::EnterButton() // Przycisk Enter
 				creditsTxt.setString("Multiplayer");
 				quitTxt.setString("Back");
 			}
+			else if (pageNumber == 6)
+			{
+				connectionType = '3';
+				return 1;
+			}
 			break;
 		}
 	}

@@ -4,7 +4,7 @@ class Blocks
 {
 protected:
 	float blockX, blockY;
-	Texture blockTextureRed, blockTextureYellow, blockTextureGreen;
+	Texture blockTextureBlue, blockTextureYellow, blockTextureGreen;
 
 private:
 	unsigned int totalBlocks;
