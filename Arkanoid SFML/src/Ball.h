@@ -10,6 +10,10 @@ public:
 	Sprite ballSprite;
 
 private:
+	SoundBuffer paddleHitSoundBuff, brickHitSoundBuff;
+	Sound paddleHitSound, brickHitSound;
+
+private:
 	bool Collision(Sprite s1, Sprite s2);
 	bool secondPlayerCollision(Sprite playerSprite);
 

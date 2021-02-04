@@ -8,7 +8,6 @@ private:
 	Font font;
 	Text *levelTxt, playTxt, creditsTxt, quitTxt, credits, backTxt;
 	SoundBuffer switchSoundBuffer, chooseSoundBuffer;
-	Music themeMusic;
 	Sound switchSound, chooseSound;
 	int direction, state, pageNumber;
 	char connectionType;

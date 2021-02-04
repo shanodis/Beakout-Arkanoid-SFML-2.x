@@ -9,6 +9,14 @@ Ball::Ball()
 	ballTexture.loadFromFile("data/ball.png");
 	ballSprite.setTexture(ballTexture);
 	ballSprite.setPosition(ballX, ballY);
+
+	// Dzwieki
+	paddleHitSoundBuff.loadFromFile("data/Sounds/hit.wav");
+	paddleHitSound.setBuffer(paddleHitSoundBuff);
+	paddleHitSound.setVolume(30.0f);
+	brickHitSoundBuff.loadFromFile("data/Sounds/brick hit.wav");
+	brickHitSound.setBuffer(brickHitSoundBuff);
+	brickHitSound.setVolume(30.0f);
 }
 
 Ball::Ball(float x, float y)
@@ -19,6 +27,14 @@ Ball::Ball(float x, float y)
 	ballTexture.loadFromFile("data/ball.png");
 	ballSprite.setTexture(ballTexture);
 	ballSprite.setPosition(ballX, ballY);
+
+	// Dzwieki
+	paddleHitSoundBuff.loadFromFile("data/Sounds/hit.wav");
+	paddleHitSound.setBuffer(paddleHitSoundBuff);
+	paddleHitSound.setVolume(30.0f);
+	brickHitSoundBuff.loadFromFile("data/Sounds/brick hit.wav");
+	brickHitSound.setBuffer(brickHitSoundBuff);
+	brickHitSound.setVolume(30.0f);
 }
 
 void Ball::setStartPosition(bool goToPaddle)
@@ -85,6 +101,7 @@ bool Ball::paddleCollision(Sprite playerSprite, bool isSecondPlayer)
 	{
 		if (Collision(playerSprite, ballSprite))
 		{
+			paddleHitSound.play();
 			int angle = 240 + rand() % 30, dir = rand() % 2;
 			if (dir == 0)	angle = 240 + rand() % 30;
 			else    angle = 310 - rand() % 30;
@@ -104,6 +121,7 @@ bool Ball::blockCollision(Sprite **blockSprite)
 	{
 		if (Collision(ballSprite, blockSprite[i][0]))
 		{
+			brickHitSound.play();
 			blockSprite[i][0].setPosition(-1000, 0);
 			balldy = -balldy;
 			return true;

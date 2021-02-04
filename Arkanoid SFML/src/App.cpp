@@ -5,6 +5,10 @@ App::App()
 	window.create(VideoMode(800, 600, 32), "Arkanoid");
 	window.setFramerateLimit(60);
 	gameplayType = 0;
+	themeMusic.openFromFile("data/theme.ogg");
+	themeMusic.play();
+	themeMusic.setLoop(true);
+	themeMusic.setVolume(20.0f);
 }
 
 char App::GameMenu()

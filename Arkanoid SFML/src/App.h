@@ -5,6 +5,7 @@ class App
 {
 private:
 	RenderWindow window;
+	Music themeMusic;
 	char gameplayType;
 
 private:

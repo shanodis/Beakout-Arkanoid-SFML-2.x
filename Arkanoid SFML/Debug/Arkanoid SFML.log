@@ -11,7 +11,7 @@ C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\AnimationB.cpp(1
               T=int
           ]
   App.cpp
-C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\App.cpp(52,12): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\App.cpp(56,12): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
   Ball.cpp
   Blocks.cpp
 C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\Blocks.cpp(5,23): warning C4244: "=": konwersja z "float" do "unsigned int", możliwa utrata danych
@@ -58,5 +58,6 @@ C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\Blocks.cpp(163,3
   Server.cpp
   main.cpp
   Generowanie kodu...
-C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\Menu.cpp(568): warning C4715: "Menu::Run”: niewszystkie ścieżki kodu zwracają wartość
+C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Arkanoid SFML\src\Menu.cpp(566): warning C4715: "Menu::Run”: niewszystkie ścieżki kodu zwracają wartość
+  LINK : nie znaleziono elementu C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Debug\Arkanoid SFML.exe ani nie został on skompilowany podczas ostatniego konsolidowania przyrostowego; zostanie wykonana pełna konsolidacja
   Arkanoid SFML.vcxproj -> C:\Users\Chomik\Desktop\Projekt\Arkanoid SFML\Debug\Arkanoid SFML.exe

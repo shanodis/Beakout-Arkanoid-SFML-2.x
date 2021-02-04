@@ -80,9 +80,7 @@ Menu::Menu()
 	// Ustawienia muzyki
 	switchSoundBuffer.loadFromFile("data/Sounds/misc_menu_4.wav");
 	switchSound.setBuffer(switchSoundBuffer);
-	/*themeMusic.openFromFile("data/theme.ogg");
-	themeMusic.play();
-	themeMusic.setLoop(true);*/
+	switchSound.setVolume(30.0f);
 }
 
 /************************************************
