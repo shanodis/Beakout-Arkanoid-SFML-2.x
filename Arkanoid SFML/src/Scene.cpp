@@ -80,6 +80,11 @@ Scene::Scene()
 		heartSprite[i].setPosition(560 + (float)i * 45.0f, 150.0f);
 		heartSprite[i].setScale(Vector2f(0.7f, 0.7f));
 	}
+
+	// Dzwieki
+	bonusCatchBuffer.loadFromFile("data/Sounds/positive.wav");
+	bonusCatchSound.setBuffer(bonusCatchBuffer);
+	bonusCatchSound.setVolume(10.0f);
 }
 
 Scene::Scene(unsigned int level) // Dla trybu pojedynczego gracza
@@ -110,6 +115,11 @@ Scene::Scene(unsigned int level) // Dla trybu pojedynczego gracza
 	default:
 		break;
 	}
+
+	// Dzwieki
+	bonusCatchBuffer.loadFromFile("data/Sounds/positive.wav");
+	bonusCatchSound.setBuffer(bonusCatchBuffer);
+	bonusCatchSound.setVolume(10.0f);
 }
 
 Scene::~Scene() 
@@ -134,7 +144,10 @@ void Scene::playerCollisions(AnimationB& heart)
 	if (lives < 3)
 		if (bonusCollision(heart.animationSprite) == true)
 			if (lives < 3)
+			{
+				bonusCatchSound.play();
 				lives++;
+			}
 }
 
 void Scene::showTime()

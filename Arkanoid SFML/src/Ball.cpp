@@ -13,10 +13,10 @@ Ball::Ball()
 	// Dzwieki
 	paddleHitSoundBuff.loadFromFile("data/Sounds/hit.wav");
 	paddleHitSound.setBuffer(paddleHitSoundBuff);
-	paddleHitSound.setVolume(30.0f);
+	paddleHitSound.setVolume(5.0f);
 	brickHitSoundBuff.loadFromFile("data/Sounds/brick hit.wav");
 	brickHitSound.setBuffer(brickHitSoundBuff);
-	brickHitSound.setVolume(30.0f);
+	brickHitSound.setVolume(5.0f);
 }
 
 Ball::Ball(float x, float y)
@@ -49,8 +49,16 @@ bool Ball::moveBall(bool isSecondPlayer)
 	ballSprite.move(6 * balldx, 6 * balldy);
 
 	Vector2f v = ballSprite.getPosition();
-	if (v.x <= 0 || v.x > 520) balldx = -balldx;
-	if (v.y < 0 || v.y > 560) balldy = -balldy;
+	if (v.x <= 0 || v.x > 520)
+	{
+		paddleHitSound.play();
+		balldx = -balldx;
+	}
+	if (v.y < 0 || v.y > 560)
+	{
+		paddleHitSound.play();
+		balldy = -balldy;
+	}
 
 	if (v.y > 550) return false;
 	if (isSecondPlayer && v.y <= 0) return false;
@@ -63,8 +71,16 @@ bool Ball::moveBall(float ballPositionX, float ballPositionY)
 
 	ballSprite.setPosition(ballPositionX, ballPositionY);
 	Vector2f v = ballSprite.getPosition();
-	if (v.x <= 0 || v.x > 520) balldx = -balldx;
-	if (v.y < 0 || v.y > 560) balldy = -balldy;
+	if (v.x <= 0 || v.x > 520)
+	{
+		paddleHitSound.play();
+		balldx = -balldx;
+	}
+	if (v.y < 0 || v.y > 560)
+	{
+		paddleHitSound.play();
+		balldy = -balldy;
+	}
 
 	if (v.y > 550) return false;
 
@@ -128,6 +144,7 @@ bool Ball::blockCollision(Sprite **blockSprite)
 		}
 		else if (Collision(ballSprite, blockSprite[i][1]))
 		{
+			brickHitSound.play();
 			blockSprite[i][1].setPosition(-1000, 0);
 			balldy = -balldy;
 			return true;

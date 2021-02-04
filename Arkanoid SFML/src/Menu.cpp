@@ -22,35 +22,35 @@ Menu::Menu()
 	playTxt.setCharacterSize(34);
 	playTxt.setFillColor(Color::Red);
 	playTxt.setString("Play");
-	playTxt.setPosition(20, 200);
+	playTxt.setPosition(20.0f, 200.0f);
 
 	// Ustawienia tekstu creditsTxt
 	creditsTxt.setFont(font);
 	creditsTxt.setCharacterSize(34);
 	creditsTxt.setFillColor(Color::White);
 	creditsTxt.setString("Credits");
-	creditsTxt.setPosition(20, 250);
+	creditsTxt.setPosition(20.0f, 250.0f);
 
 	// Ustawienia tekstu quitTxt
 	quitTxt.setFont(font);
 	quitTxt.setCharacterSize(34);
 	quitTxt.setFillColor(Color::White);
 	quitTxt.setString("Exit");
-	quitTxt.setPosition(20, 300);
+	quitTxt.setPosition(20.0f, 300.0f);
 
 	// Ustawienia tekstu credits
 	credits.setFont(font);
 	credits.setCharacterSize(34);
 	credits.setFillColor(Color::White);
 	credits.setString("Created by Dominik Grudzieñ\nSources:\nhttps://opengameart.org");
-	credits.setPosition(200, 300);
+	credits.setPosition(200.0f, 300.0f);
 
 	// Ustawienia tekstu backTxt
 	backTxt.setFont(font);
 	backTxt.setCharacterSize(34);
 	backTxt.setFillColor(Color::Red);
 	backTxt.setString("Back");
-	backTxt.setPosition(90, 500);
+	backTxt.setPosition(90.0f, 500.0f);
 
 /************************************************
 *  ... Ustawienia sprite'ów
@@ -69,18 +69,18 @@ Menu::Menu()
 	arrowSprite.setTexture(arrowTexture);
 
 	// Ustawienia strza³ki
-	arrowSprite.setPosition(130, 210);
+	arrowSprite.setPosition(130.0f, 210.0f);
 	arrowSprite.setScale(Vector2f(0.05f, 0.05f));
 
 	// Ustawienia nag³ówka
 	headerSprite.setScale(Vector2f(2.0f, 2.0f));
 	headerSprite.setColor(Color(255, 255, 255, 128));
-	headerSprite.setPosition(0, -150);
+	headerSprite.setPosition(0.0f, -150.0f);
 
 	// Ustawienia muzyki
 	switchSoundBuffer.loadFromFile("data/Sounds/misc_menu_4.wav");
 	switchSound.setBuffer(switchSoundBuffer);
-	switchSound.setVolume(30.0f);
+	switchSound.setVolume(10.0f);
 }
 
 /************************************************

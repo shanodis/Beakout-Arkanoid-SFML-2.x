@@ -9,6 +9,8 @@ private:
 	Font font;
 	Text liveText, scoreText, timeText;
 	Clock clock;
+	SoundBuffer bonusCatchBuffer;
+	Sound bonusCatchSound;
 	int minutes, seconds, lives;
 	unsigned int level;
 
