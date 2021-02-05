@@ -29,6 +29,7 @@
     <ClCompile Include="src\Menu.cpp" />
     <ClCompile Include="src\Player.cpp" />
     <ClCompile Include="src\Scene.cpp" />
+    <ClCompile Include="src\ScoreList.cpp" />
     <ClCompile Include="src\Server.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -41,6 +42,7 @@
     <ClInclude Include="src\Menu.h" />
     <ClInclude Include="src\Player.h" />
     <ClInclude Include="src\Scene.h" />
+    <ClInclude Include="src\ScoreList.h" />
     <ClInclude Include="src\Server.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

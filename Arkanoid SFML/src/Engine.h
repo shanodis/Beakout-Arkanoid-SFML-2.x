@@ -4,6 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include <SFML/Network.hpp>
+#include <iostream>
 #include <ctime>
 using namespace sf;
 #define N 35
@@ -16,6 +17,7 @@ using namespace sf;
 #include "Player.h"
 #include "Scene.h"
 #include "Server.h"
+#include "ScoreList.h"
 
 
 #endif // !ENGINE.h
