@@ -25,6 +25,7 @@ private:
 	void moveArrow();
 	int readState();
 	void draw(RenderWindow& window);
+	void showScorePage();
 
 public:
 	Menu();

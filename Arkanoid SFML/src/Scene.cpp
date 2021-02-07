@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <fstream>
 
 void Scene::setInterface()
 {
@@ -207,6 +208,14 @@ void Scene::drawGame(RenderWindow& window)
 	drawBlocks(window, false);
 }
 
+void Scene::saveScore()
+{
+	ofstream file;
+	file.open("score.txt");
+	file << score;
+	file.close();
+}
+
 void Scene::Run(RenderWindow& window)
 {
 	AnimationB heart("data/Health/Hearts.png", Vector2u(8, 1), 0.12f);
@@ -237,9 +246,15 @@ void Scene::Run(RenderWindow& window)
 			if (lives == 1)	window.close(); // Warunek koñcz¹cy grê (paletka nie z³apa³a pi³ki)
 			lives--;
 		}
+		if (totalBlocks == 0)
+			window.close();
 
 		// Kolizje
-		if (blockCollision(blockSprite) == true) score += 150 + rand() % 200;
+		if (blockCollision(blockSprite) == true)
+		{
+			score += 150 + rand() % 200;
+			totalBlocks--;
+		}
 		paddleCollision(playerSprite, false);
 		playerCollisions(heart);
 
@@ -256,4 +271,5 @@ void Scene::Run(RenderWindow& window)
 
 		window.display();
 	}
+	saveScore();
 }

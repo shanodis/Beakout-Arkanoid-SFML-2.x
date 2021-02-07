@@ -3,11 +3,11 @@
 class Blocks
 {
 protected:
+	unsigned int totalBlocks;
 	float blockX, blockY;
 	Texture blockTextureBlue, blockTextureYellow, blockTextureGreen;
 
 private:
-	unsigned int totalBlocks;
 	Vector2f middleScreen;
 
 private:

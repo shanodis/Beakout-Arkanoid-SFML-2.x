@@ -81,6 +81,7 @@ void Blocks::onlineLevel()
 
 void Blocks::Level1()
 {
+	totalBlocks = 35;
 	blockSprite = new Sprite * [N];
 	for (int i = 0; i < N; i++)
 		blockSprite[i] = new Sprite[2];
@@ -98,6 +99,7 @@ void Blocks::Level1()
 
 void Blocks::Level2() // Poziom 2, Schodki wywrócone
 {
+	totalBlocks = 24;
 	blockSprite = new Sprite * [N];
 	for (int i = 0; i < N; i++)
 		blockSprite[i] = new Sprite[2];
@@ -141,6 +143,7 @@ void Blocks::Level2() // Poziom 2, Schodki wywrócone
 
 void Blocks::Level3()
 {
+	totalBlocks = 28;
 	blockSprite = new Sprite * [N];
 	for (int i = 0; i < N; i++)
 		blockSprite[i] = new Sprite[2];

@@ -1,5 +1,7 @@
 #include "Engine.h"
 #include <fstream>
+#include <sstream>
+#include <vector>
 
 /************************************************
  *  ... Konstruktor inicjalizuj¹cy
@@ -111,14 +113,27 @@ void Menu::createPage6()
 		levelTexture[i] = new Texture[3];
 		levelSprite[i] = new Sprite[3];
 	}
+
 	levelTexture[0][0].loadFromFile("data/Level Images/Level1.png");
 	levelTexture[0][1].loadFromFile("data/Level Images/Chosen Level1.png");
-	levelSprite[0][0].setTexture(levelTexture[0][0]);
-	levelSprite[0][1].setTexture(levelTexture[0][1]);
-	levelSprite[0][0].setScale(Vector2f(0.35f, 0.35f));
-	levelSprite[0][1].setScale(Vector2f(0.35f, 0.35f));
-	levelSprite[0][0].setPosition(50, 200);
-	levelSprite[0][1].setPosition(50, 200);
+	levelTexture[1][0].loadFromFile("data/Level Images/Level2.png");
+	levelTexture[1][1].loadFromFile("data/Level Images/Chosen Level2.png");
+	levelTexture[2][0].loadFromFile("data/Level Images/Level3.png");
+	levelTexture[2][1].loadFromFile("data/Level Images/Chosen Level3.png");
+
+	int multiplier = 0;
+	for (int i = 0; i < 3; i++)
+	{
+		levelSprite[i][0].setTexture(levelTexture[i][0]);
+		levelSprite[i][1].setTexture(levelTexture[i][1]);
+
+		levelSprite[i][0].setScale(Vector2f(0.35f, 0.35f));
+		levelSprite[i][1].setScale(Vector2f(0.35f, 0.35f));
+
+		levelSprite[i][0].setPosition(50 + multiplier, 200);
+		levelSprite[i][1].setPosition(50 + multiplier, 200);
+		multiplier += 200;
+	}
 
 	// Teksty
 	levelTxt = new Text[3];
@@ -509,6 +524,81 @@ void Menu::draw(RenderWindow& window)
 	}
 }
 
+void Menu::showScorePage()
+{
+	RenderWindow* window = new RenderWindow;
+	window->create(VideoMode(800, 600, 32), "ScoreList");
+	window->setFramerateLimit(60);
+
+	int score = 0;
+	vector<string> nameVector;
+	vector<int> scoreVector;
+	string line;
+	ifstream file;
+
+	file.open("playerScore.txt");
+	while (!file.eof())
+	{
+		file >> line;
+		nameVector.push_back(line);
+		file >> line;
+		stringstream tmp(line);
+		tmp >> score;
+		scoreVector.push_back(score);
+	}
+	file.close();
+
+	ScoreList list;
+	
+	int i = 0;
+	while (i < nameVector.size() - 1)
+	{
+		list.add_node(scoreVector[i], nameVector[i]);
+		i++;
+	}
+
+	int size = nameVector.size() - 1;
+	Text* sfmlText = new Text[size];
+
+	list.saveStrings(sfmlText);
+
+	float x = 190.0f, y = 100.0f;
+	int multiplier = 0;
+	for (int i = 0; i < size; i++)
+	{
+		multiplier += 50;
+		sfmlText[i].setPosition(x, y + multiplier);
+		sfmlText[i].setCharacterSize(32);
+		sfmlText[i].setFillColor(Color::White);
+		sfmlText[i].setFont(font);
+	}
+	sfmlText[0].setFillColor(Color::Yellow);
+
+	while (window->isOpen())
+	{
+		Event event;
+		while (window->pollEvent(event))
+		{
+			if ((event.type == Event::KeyPressed) && (event.key.code == Keyboard::F2 || event.key.code == Keyboard::Escape))
+				window->close();
+
+			if (event.type == Event::Closed)
+				window->close();
+		}
+
+		window->clear(Color::Magenta);
+
+		window->draw(landscapeSprite);
+
+		for (int i = 0; i < size; i++)
+			window->draw(sfmlText[i]);
+
+		window->display();
+	}
+	delete window;
+	delete[] sfmlText;
+}
+
 char Menu::Run(RenderWindow& window)
 {
 	while (window.isOpen())
@@ -524,7 +614,6 @@ char Menu::Run(RenderWindow& window)
 			}
 
 			// Obs³uga klawiatury w menu
-
 			if (event.type == Event::KeyPressed && event.key.code == Keyboard::Escape)
 			{
 				if (!EscapeButton(window)) return 'q';
@@ -551,6 +640,8 @@ char Menu::Run(RenderWindow& window)
 				moveArrow();
 			else if (event.type == Event::KeyPressed && event.key.code == Keyboard::Left || event.key.code == Keyboard::Right)
 				moveInPage6();
+			if (event.type == Event::KeyPressed && event.key.code == Keyboard::F2)
+				showScorePage();
 		}
 		// Aktualizacja menu...
 		moveLandscape();

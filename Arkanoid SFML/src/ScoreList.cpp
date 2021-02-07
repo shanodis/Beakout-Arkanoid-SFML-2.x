@@ -1,6 +1,7 @@
 #include "Engine.h"
+#include <string>
 
-ScoreList::ScoreList() { root = NULL; }
+ScoreList::ScoreList() { root = NULL; textIterator = 0; }
 
 ScoreList::~ScoreList() { delete_tree(root); }
 
@@ -50,3 +51,19 @@ void ScoreList::add_node(int score, string playerName)
     else
         parent->right = new_node;
 }
+
+void ScoreList::inorder_save(BTree* ptr, Text* strings)
+{
+    if (ptr)
+    {
+        inorder_save(ptr->right, strings);
+
+        string txt = ptr->playerName + " " + to_string(ptr->score);
+        strings[textIterator].setString(txt);
+        textIterator++;
+
+        inorder_save(ptr->left, strings);
+    }
+}
+
+void ScoreList::saveStrings(Text* strings) { inorder_save(root, strings); }

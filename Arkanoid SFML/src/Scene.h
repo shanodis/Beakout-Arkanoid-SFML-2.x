@@ -21,6 +21,7 @@ private:
 	void playerCollisions(AnimationB& heart);
 	void drawHearts(RenderWindow&);
 	void setInterface();
+	void saveScore();
 
 public:
 	Scene();
